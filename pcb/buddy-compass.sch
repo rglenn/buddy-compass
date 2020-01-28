@@ -989,9 +989,9 @@ F 3 "" H 6250 3250 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6250 3250 6250 3350
+	6250 3250 6250 3300
 Wire Wire Line
-	6250 3650 6250 3750
+	6250 3650 6250 3700
 $Comp
 L power:VCC #PWR0108
 U 1 1 5E14F3E9
@@ -1319,14 +1319,14 @@ Text Label 800  2150 0    50   ~ 0
 SWO
 Wire Wire Line
 	800  2150 1150 2150
-Text Label 3300 1350 2    50   ~ 0
+Text Label 3300 1750 2    50   ~ 0
 SDA
-Text Label 3300 1450 2    50   ~ 0
+Text Label 3300 2150 2    50   ~ 0
 SCL
 Wire Wire Line
-	3300 1450 2850 1450
+	3300 2150 2850 2150
 Wire Wire Line
-	2850 1350 3300 1350
+	2850 1750 3300 1750
 $Comp
 L Transistor_FET:DMG2301L Q1
 U 1 1 5E3C5C44
@@ -2172,14 +2172,60 @@ Wire Wire Line
 	1950 4450 1950 4500
 Connection ~ 1750 4450
 $Comp
-L power:+3.3V #PWR?
+L power:+3.3V #PWR04
 U 1 1 5E45BAE6
 P 1750 4400
-F 0 "#PWR?" H 1750 4250 50  0001 C CNN
+F 0 "#PWR04" H 1750 4250 50  0001 C CNN
 F 1 "+3.3V" H 1765 4573 50  0000 C CNN
 F 2 "" H 1750 4400 50  0001 C CNN
 F 3 "" H 1750 4400 50  0001 C CNN
 	1    1750 4400
 	1    0    0    -1  
 $EndComp
+$Comp
+L Device:C C15
+U 1 1 5E280529
+P 6750 3500
+F 0 "C15" H 6865 3546 50  0000 L CNN
+F 1 "100n" H 6865 3455 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 6788 3350 50  0001 C CNN
+F 3 "~" H 6750 3500 50  0001 C CNN
+	1    6750 3500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6250 3700 6750 3700
+Wire Wire Line
+	6750 3700 6750 3650
+Connection ~ 6250 3700
+Wire Wire Line
+	6250 3700 6250 3750
+Wire Wire Line
+	6250 3300 6750 3300
+Wire Wire Line
+	6750 3300 6750 3350
+Connection ~ 6250 3300
+Wire Wire Line
+	6250 3300 6250 3350
+$Comp
+L Device:C C16
+U 1 1 5E2D8B05
+P 7250 3500
+F 0 "C16" H 7365 3546 50  0000 L CNN
+F 1 "1u" H 7365 3455 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 7288 3350 50  0001 C CNN
+F 3 "~" H 7250 3500 50  0001 C CNN
+	1    7250 3500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6750 3700 7250 3700
+Wire Wire Line
+	7250 3700 7250 3650
+Connection ~ 6750 3700
+Wire Wire Line
+	6750 3300 7250 3300
+Wire Wire Line
+	7250 3300 7250 3350
+Connection ~ 6750 3300
 $EndSCHEMATC
