@@ -1408,8 +1408,6 @@ NoConn ~ 2850 1150
 NoConn ~ 2850 1250
 NoConn ~ 2850 1450
 NoConn ~ 2850 1850
-NoConn ~ 2850 2150
-NoConn ~ 2850 3550
 NoConn ~ 2850 3750
 NoConn ~ 2850 3850
 NoConn ~ 2850 3950
@@ -1607,4 +1605,12 @@ Wire Wire Line
 Connection ~ 6500 5650
 Text Label 7400 5100 2    50   ~ 0
 FRST
+Text Label 3300 3550 2    50   ~ 0
+DFU
+Text Label 3300 2150 2    50   ~ 0
+FRST
+Wire Wire Line
+	2850 2150 3300 2150
+Wire Wire Line
+	2850 3550 3300 3550
 $EndSCHEMATC
